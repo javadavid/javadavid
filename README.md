@@ -1,3 +1,8 @@
-button属性修改在bootstrap.css里面
-button显示修改在-include/footer.html和base.js里面
+## 介绍
+这是我通过Jekyll生成的一个Blog ;接下来我要对它进行修改;
+Blog地址:http://xh888.github.io/blog/
+
+## 2015.11.21更新
+感谢 https://github.com/lay1010 提供模版文件。:-)
+
 

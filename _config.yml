@@ -1,43 +1,48 @@
 permalink: /:year/:month/:day/:title.html
 paginate: 10
-markdown: redcarpet
-
+markdown: kramdown
+timezone: Asia/Shanghai
+port: 4000
 # 作者信息
 author: 
-  name: Anya Lin
-  email: lay.1010@hotmail.com
-  link: http://painterlin.com
-  weibo: http://weibo.com/orangeissweet
-  github: http://github.com/lay1010
-  music: http://site.douban.com/linanya
-  linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
+  name: Kuma's blog
+  email: 276602624@qq.com
+  # link: http://painterlin.com
+  weibo: http://weibo.com/1328507784
+  github: http://github.com/xh888
+  # music: http://site.douban.com/linanya
+  # linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
 
 # 站点信息
-title: 林安亚的博客
+title: Kuma's blog
 description: My personal blog
-url: http://painterlin.com
+url: http://xh888.github.io/blog
 rss_url: /pages/atom.xml
-
+baseurl: "/blog"
+duoshuo-short_name: "xh888-blog"
 # gavatar头像及Favicon
-gavatar: /public/img/deer3.png
-favicon: /public/img/deer3.png
+gavatar: /public/img/gavatar.png
+favicon: /public/img/favicon.png
+
+# 事例文件的根目录
+post_demo_basepath: "http://xh888.github.io/page_demo"
 
 # google analytics 设置
-ga:
-  id: UA-54262064-1 
-  url: painterlin.com
+# ga:
+#   id: UA-54262064-1 
+#   url: painterlin.com
 
 # disqus 设置
-disqus:
-  shortname: painterlin
+# disqus:
+#   shortname: painterlin
 
 # 主题设置，自动激活某个标签
-active: 读书
+active: tags
 
 # 首页除了最新文章外显示分类
-cates: 
-  - Optimization
-  - LaTeX
+# cates: 
+#   - Optimization
+#   - LaTeX
 
 # 中文本地化
 locals:
@@ -45,3 +50,4 @@ locals:
   about: 关于
   newest: 最新文章
   archive: 归档
+  index: 首页

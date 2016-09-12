@@ -1,4 +1,4 @@
-/* 控制导航按钮动作 */
+﻿/* 控制导航按钮动作 */
 function nav_click(is_show) {
   if (is_show) {
     /* 显示左侧aside */
@@ -39,7 +39,8 @@ function content_click(is_show){
   }
 }
 
-$(document).ready(function() {
+
+$('#container').load = $(document).ready(function() {
   /* 控制左侧 aside 的动作 */
   $("#nav_btn").on('click', function() {
     isClicked = $(this).data('clicked');
@@ -47,6 +48,7 @@ $(document).ready(function() {
     nav_click(isClicked);
 
     $(this).data('clicked', !isClicked);
+  
   });
 
   $("#content_btn").on('click', function(){
@@ -57,26 +59,41 @@ $(document).ready(function() {
     $(this).data('clicked',!isClicked);
 
   });
+  	picWarp();
 
-  $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
-  $(document).on("pjax:end", function() {
-    if($("body").find('.container').width() < 992)
-      $('#nav_btn').click();
-    $('.aside3').scrollTop(0);
-    contentEffects();
-  });
-  $('body').on('click', '.show-commend', function(){
-    var ds_loaded = false;
-    window.disqus_shortname = $('.show-commend').attr('name');
-    $.ajax({
-      type: "GET",
-      url: "http://" + disqus_shortname + ".disqus.com/embed.js",
-      dataType: "script",
-      cache: true
-    });
-  });
-  contentEffects();
+	contentEffects();
+	
+	$(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
+	  
+	$(document).on("pjax:complete", function(){
+	    if($("body").find('.container').width() < 992){
+			$('#nav_btn').click();
+	    }
+		$('.aside3').scrollTop(0);
+		picWarp();
+		contentEffects();
+		pajx_loadDuodsuo();
+	});
 });
+
+
+
+
+// 动态加载多说评论框的方法（pjax使用后会失效），需要回调重新绑定。
+function pajx_loadDuodsuo(){ 
+	var dus=$(".ds-thread"); 
+	if($(dus).length==1){
+		 var el = document.createElement('div');
+		 el.setAttribute('data-thread-key',$(dus).attr("data-thread-key"));//必选参数
+		 el.setAttribute('data-url',$(dus).attr("data-url"));
+		 el.setAttribute('data-title',$(dus).attr("data-title"));
+		 DUOSHUO.EmbedThread(el);
+		 $(dus).replaceWith(el);
+	} 
+}
+
+
+//渲染发表的帖子
 function contentEffects(){
   //remove the asidebar
   $('.row-offcanvas').removeClass('active');
@@ -89,9 +106,21 @@ function contentEffects(){
     }); 
     $("pre").addClass("prettyprint");
     prettyPrint(); 
-    $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
+    $('#content img').addClass('img-thumbnail').parent('p')//.addClass('center');
     $('#content_btn').show();
   }else{
     $('#content_btn').hide();
   }
 }
+
+
+//包装img标签 使用lightBox,这里要使用当 图片加载完成后运行
+function picWarp(){
+	$('#content img').on("load",function(){
+		if( $(this).height()>500){
+			$(this).height(300);
+		}
+		$(this).wrap("<a title='"+$(this).attr('alt')+"' href='"+$(this).attr('src')+"'></a>").parent().lightBox();
+	});
+}
+

@@ -53,6 +53,10 @@ body, html {
   width: 56px;
   /*height: 90px;*/
   border: 0px solid #fff;
+
+display: block;
+margin: 0 auto;
+height: 56px;
 }
 .aside1_bottom {
   width: 100%;
@@ -123,4 +127,27 @@ blockquote p {
 .show-commend {
   width: 100%;
   margin-bottom: 40px;
+}
+
+
+
+/*侧边栏样式 溢出现象修改*/
+.list-group {
+	margin:20px 0;
+}
+
+.aside2 {
+	margin:auto;
+}
+
+.panel-group{
+	margin:20px 0 20px 35px;
+}
+.img-thumbnail{
+	border:1px dashed #ccc;
+}
+
+
+div#tags.tab-pane.active{
+	overflow:hidden;
 }

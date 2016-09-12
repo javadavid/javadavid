@@ -39,69 +39,6 @@ function content_click(is_show){
   }
 }
 
-/* 修复 `归档`、`关于`点击后不能显示为激活状态 */
-function aside_click_patch(){
-  $('.nav-stacked li > a.pjaxlink').bind('click', function() {
-    $('.nav-stacked > li.active').removeClass('active');
-    $(this).parent('li').first().addClass('active');
-  });
-}
-
-/* 文章列表点击后，对应文章显示激活状态 */
-function aside2_link_patch() {
-  $('.aside2 a.pjaxlink').bind('click', function() {
-    $('.aside2 a.pjaxlink.active').removeClass('active');
-    $(this).addClass('active');
-  });
-
-  $('.nav-stacked li > a').bind('click', function() {
-    $('.list-group a.active').removeClass('active');
-  });
-}
-
-function nav_link_patch() {
-  // Smooth scrolling
-  $('#content_table a').on('click', function() {
-    var target = $(this.hash);
-    target.addClass('flash').delay(700).queue(function() {
-      $(this).removeClass('flash').dequeue();
-    });
-  });
-}
-
-/* 文章导航列表 */
-function contentEffects(){
-  //remove the asidebar
-  $('.row-offcanvas').removeClass('active');
-  if($("#nav").length > 0){
-    $("#content > h2,#content > h3,#content > h4,#content > h5,#content > h6").each(function() {
-        var current = $(this);
-        // current.attr("id", "title" + i);
-        current.attr('id', function() {
-          var ID = "",
-              alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-          for(var i=0; i < 5; i++) {
-            ID += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-          }
-          return ID;
-        }); 
-
-        tag = current.prop('tagName').substr(-1);
-        $("#nav").append("<li><a class='level" + tag + "' href='#" + $(this).attr('id') + "'>" + current.text() + "</a></li>");
-    }); 
-    $("pre").addClass("prettyprint");
-    prettyPrint(); 
-    $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
-    $('#content_btn').show();
-    // $('#content_btn .fa-minus').size() > 0 && $('#content_btn').trigger('click') //保证关闭状态
-    $('#content_btn .fa-minus').size() > 0 && $('#content_table').show(); //保证内容可见
-  }else{
-    $('#content_btn').hide();
-  }
-  nav_link_patch();
-}
-
 $(document).ready(function() {
   /* 控制左侧 aside 的动作 */
   $("#nav_btn").on('click', function() {
@@ -122,24 +59,11 @@ $(document).ready(function() {
   });
 
   $(document).pjax('.pjaxlink', '#pjax', { fragment: "#pjax", timeout: 10000 });
-  $(document).on({
-    'pjax:click': function() {
-      $('#pjax').removeClass('fadeIn').addClass('fadeOut');
-      NProgress.start();
-    },
-    'pjax:start': function() {
-      $('#pjax').css({'opacity':0});
-    },
-    'pjax:end': function() {
-      NProgress.done();
-      $('container').scrollTop(0);
-      $('#pjax').css({'opacity':1}).removeClass('fadeOut').addClass('fadeIn');
-
-      if ($("body").find('.container').width() < 992)
+  $(document).on("pjax:end", function() {
+    if($("body").find('.container').width() < 992)
       $('#nav_btn').click();
-      $('.aside3').scrollTop(0);
-      contentEffects();
-    }
+    $('.aside3').scrollTop(0);
+    contentEffects();
   });
   $('body').on('click', '.show-commend', function(){
     var ds_loaded = false;
@@ -148,13 +72,26 @@ $(document).ready(function() {
       type: "GET",
       url: "http://" + disqus_shortname + ".disqus.com/embed.js",
       dataType: "script",
-      cache: true,
-      success: function() {
-        $('.show-commend').hide();
-      }
+      cache: true
     });
   });
   contentEffects();
-  aside_click_patch();
-  aside2_link_patch();
 });
+function contentEffects(){
+  //remove the asidebar
+  $('.row-offcanvas').removeClass('active');
+  if($("#nav").length > 0){
+    $("#content > h2,#content > h3,#content > h4,#content > h5,#content > h6").each(function(i) {
+        var current = $(this);
+        current.attr("id", "title" + i);
+        tag = current.prop('tagName').substr(-1);
+        $("#nav").append("<div style='margin-left:"+15*(tag-1)+"px'><a id='link" + i + "' href='#title" +i + "'>" + current.html() + "</a></div>");
+    }); 
+    $("pre").addClass("prettyprint");
+    prettyPrint(); 
+    $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
+    $('#content_btn').show();
+  }else{
+    $('#content_btn').hide();
+  }
+}

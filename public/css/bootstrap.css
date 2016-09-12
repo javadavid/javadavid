@@ -269,7 +269,7 @@ td, th {
     }
 
     .table-bordered th, .table-bordered td {
-        border: 1px solid #333333 !important
+        border: 1px solid #ddd !important
     }
 }
 
@@ -1113,7 +1113,7 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
-    background-color: #414141
+    background-color: #fff
 }
 
 input, button, select, textarea {
@@ -1123,12 +1123,12 @@ input, button, select, textarea {
 }
 
 a {
-    color: #ccc;
+    color: #428bca;
     text-decoration: none
 }
 
 a:hover, a:focus {
-    color: #fff;
+    color: #2a6496;
     text-decoration: underline
 }
 
@@ -1162,7 +1162,7 @@ img {
     padding: 4px;
     line-height: 1.42857143;
     background-color: #fff;
-    border: 0px solid #333333;         
+    border: 0px solid #ddd;         
     border-radius: 4px;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -1181,7 +1181,7 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid #333
+    border-top: 1px solid #eee
 }
 
 .sr-only {
@@ -1413,7 +1413,7 @@ a.bg-danger:hover {
 .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    border-bottom: 1px solid #414141
+    border-bottom: 1px solid #eee
 }
 
 ul, ol {
@@ -1488,7 +1488,7 @@ blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 17.5px;
-    border-left: 5px solid #414141
+    border-left: 5px solid #eee
 }
 
 blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child {
@@ -1509,7 +1509,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
 .blockquote-reverse, blockquote.pull-right {
     padding-right: 15px;
     padding-left: 0;
-    border-right: 5px solid #414141;
+    border-right: 5px solid #eee;
     border-left: 0;
     text-align: right
 }
@@ -1543,8 +1543,8 @@ code, kbd, pre, samp {
 code {
     padding: 2px 4px;
     font-size: 90%;
-    color: #B1B4B7;
-    background-color: #333333;
+    color: #c7254e;
+    background-color: #f9f2f4;
     border-radius: 4px
 }
 
@@ -1573,7 +1573,7 @@ pre {
     word-wrap: break-word;
     color: #333;
     background-color: #f5f5f5;
-    border: 1px solid #414141;
+    border: 1px solid #ccc;
     border-radius: 4px
 }
 
@@ -2497,12 +2497,12 @@ th {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #333333
+    border-top: 1px solid #ddd
 }
 
 .table>thead>tr>th {
     vertical-align: bottom;
-    border-bottom: 2px solid #333333
+    border-bottom: 2px solid #ddd
 }
 
 .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>th,
@@ -2512,7 +2512,7 @@ th {
 }
 
 .table>tbody+tbody {
-    border-top: 2px solid #333333
+    border-top: 2px solid #ddd
 }
 
 .table .table {
@@ -2525,12 +2525,12 @@ th {
 }
 
 .table-bordered {
-    border: 1px solid #333333
+    border: 1px solid #ddd
 }
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th,
 .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-    border: 1px solid #333333
+    border: 1px solid #ddd
 }
 
 .table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
@@ -2538,7 +2538,7 @@ th {
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
-    background-color: #3E3E3E
+    background-color: #f9f9f9
 }
 
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
@@ -2629,7 +2629,7 @@ table td[class*="col-"], table th[class*="col-"] {
         overflow-y: hidden;
         overflow-x: auto;
         -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #333333;
+        border: 1px solid #ddd;
         -webkit-overflow-scrolling: touch
     }
 
@@ -2679,9 +2679,9 @@ legend {
     margin-bottom: 20px;
     font-size: 21px;
     line-height: inherit;
-    color: #E8E8E8;
+    color: #333;
     border: 0;
-    border-bottom: 1px solid #333333
+    border-bottom: 1px solid #e5e5e5
 }
 
 label {
@@ -2771,7 +2771,7 @@ output {
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
-    background-color: #414141;
+    background-color: #eee;
     opacity: 1
 }
 
@@ -3145,7 +3145,7 @@ textarea.input-lg, select[multiple].input-lg {
 }
 
 .btn:hover, .btn:focus {
-    color: #E8E8E8;
+    color: #333;
     text-decoration: none
 }
 
@@ -3166,16 +3166,16 @@ textarea.input-lg, select[multiple].input-lg {
 }
 
 .btn-default {
-    color: #E8E8E8;
-    background-color: #414141;
-    border-color: #414141
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active,
 .open>.dropdown-toggle.btn-default {
-    color: #E8E8E8;
-    background-color: #3D3D3D;
-    border-color: #333
+    color: #333;
+    background-color: #e5e5e5;
+    border-color: #adadad
 }
 
 .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
@@ -3187,8 +3187,8 @@ textarea.input-lg, select[multiple].input-lg {
 .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus,
 .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
-    background-color: #333333;
-    border-color: #414141
+    background-color: #fff;
+    border-color: #ccc
 }
 
 .btn-default .badge {
@@ -3198,15 +3198,15 @@ textarea.input-lg, select[multiple].input-lg {
 
 .btn-primary {
     color: #fff;
-    background-color: #4C4C4C;
-    border-color: #333333;
+    background-color: #16a085;
+    border-color: #16a090;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
 .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #414141;
-    border-color: #333;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
 }
 
 .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
@@ -3875,7 +3875,7 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
     line-height: 1;
     color: #555;
     text-align: center;
-    background-color: #414141;
+    background-color: #eee;
     border: 1px solid #ccc;
     border-radius: 4px
 }
@@ -3965,7 +3965,7 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 
 .nav>li>a:hover, .nav>li>a:focus {
     text-decoration: none;
-    background-color: #414141
+    background-color: #eee
 }
 
 .nav>li.disabled>a {
@@ -3980,7 +3980,7 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 }
 
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-    background-color: #414141;
+    background-color: #eee;
     border-color: #428bca
 }
 
@@ -3996,7 +3996,7 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #333333
+    border-bottom: 1px solid #ddd
 }
 
 .nav-tabs>li {
@@ -4012,13 +4012,13 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 }
 
 .nav-tabs>li>a:hover {
-    border-color: #414141 #414141 #333333
+    border-color: #eee #eee #ddd
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
     color: #555;
     background-color: #fff;
-    border: 1px solid #333333;
+    border: 1px solid #ddd;
     border-bottom-color: transparent;
     cursor: default
 }
@@ -4059,11 +4059,11 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 
 .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover,
 .nav-tabs.nav-justified>.active>a:focus {
-    border: 1px solid #333333
+    border: 1px solid #ddd
 }
 
 @media (min-width:768px){.nav-tabs.nav-justified>li>a {
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0
     }
 
@@ -4138,11 +4138,11 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 
 .nav-tabs-justified>.active>a, .nav-tabs-justified>.active>a:hover,
 .nav-tabs-justified>.active>a:focus {
-    border: 1px solid #333333
+    border: 1px solid #ddd
 }
 
 @media (min-width:768px){.nav-tabs-justified>li>a {
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0
     }
 
@@ -4556,11 +4556,11 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #333333
+    border-color: #ddd
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #333333
+    background-color: #ddd
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -4773,7 +4773,7 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
     text-decoration: none;
     color: #428bca;
     background-color: #fff;
-    border: 1px solid #333333;
+    border: 1px solid #ddd;
     margin-left: -1px
 }
 
@@ -4791,8 +4791,8 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus,
 .pagination>li>span:focus {
     color: #2a6496;
-    background-color: #414141;
-    border-color: #333333
+    background-color: #eee;
+    border-color: #ddd
 }
 
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover,
@@ -4809,7 +4809,7 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
 .pagination>.disabled>a:focus {
     color: #777;
     background-color: #fff;
-    border-color: #333333;
+    border-color: #ddd;
     cursor: not-allowed
 }
 
@@ -4858,13 +4858,13 @@ select[multiple].input-group-sm>.input-group-addon, select[multiple].input-group
     display: inline-block;
     padding: 5px 14px;
     background-color: #fff;
-    border: 1px solid #333333;
+    border: 1px solid #ddd;
     border-radius: 15px
 }
 
 .pager li>a:hover, .pager li>a:focus {
     text-decoration: none;
-    background-color: #414141
+    background-color: #eee
 }
 
 .pager .next>a, .pager .next>span {
@@ -4961,7 +4961,7 @@ a.label:hover, a.label:focus {
 .badge {
     display: inline-block;
     min-width: 10px;
-    padding: 3px 5px;
+    padding: 3px 7px;
     font-size: 12px;
     font-weight: bold;
     color: #fff;
@@ -4969,7 +4969,7 @@ a.label:hover, a.label:focus {
     vertical-align: baseline;
     white-space: nowrap;
     text-align: center;
-    background-color: #666;
+    background-color: #777;
     border-radius: 10px
 }
 
@@ -5006,7 +5006,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     padding: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #414141
+    background-color: #eee
 }
 
 .jumbotron h1, .jumbotron .h1 {
@@ -5053,7 +5053,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
     margin-bottom: 20px;
     line-height: 1.42857143;
     background-color: #fff;
-    border: 1px solid #333333;
+    border: 1px solid #ddd;
     border-radius: 4px;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -5320,8 +5320,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: #ccc;
-    border: 1px solid #333333;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
 }
 
 .list-group-item-lay {
@@ -5330,18 +5330,18 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     padding: 10px 15px;
     margin-bottom: -1px;
     color: #fff;
-    background-color: #414141;
-    border: 1px solid #333;/*115449;*/
+    background-color: #1abc9c;
+    border: 0px solid #1abc9c;/*115449;*/
     border-left: 0px;
     border-right: 0px;
-    /*border: 0px solid #333333;*/
+    /*border: 0px solid #ddd;*/
     margin-right: 0px; margin-left: 35px; 
 }
 
 a.list-group-item-lay:hover, a.list-group-item-lay:focus {
     text-decoration: none;
-    color: #E8E8E8;
-    background-color: #3E3E3E;
+    color: #fff;
+    background-color: #16a085;
 }
 
 .list-group-item-lay:first-child {
@@ -5387,7 +5387,7 @@ a.list-group-item-lay {
 }
 
 a.list-group-item {
-    color: #000
+    color: #555
 }
 
 a.list-group-item .list-group-item-heading {
@@ -5396,14 +5396,14 @@ a.list-group-item .list-group-item-heading {
 
 a.list-group-item:hover, a.list-group-item:focus {
     text-decoration: none;
-    color: #000;
-    background-color: #C1C1C1
+    color: #555;
+    background-color: #f5f5f5
 }
 
 
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
-    background-color: #414141;
+    background-color: #eee;
     color: #777
 }
 
@@ -5419,9 +5419,9 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
     z-index: 2;
-    color: #F0E083;
-    background-color: #545454;
-    border-color: #333
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca
 }
 
 .list-group-item.active .list-group-item-heading, .list-group-item.active:hover .list-group-item-heading,
@@ -5549,7 +5549,7 @@ a.list-group-item-danger.active:focus {
 
 .panel {
     margin-bottom: 20px;
-    background-color: #414141;
+    background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -5585,7 +5585,7 @@ a.list-group-item-danger.active:focus {
 .panel-footer {
     padding: 10px 15px;
     background-color: #f5f5f5;
-    border-top: 1px solid #333333;
+    border-top: 1px solid #ddd;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px
 }
@@ -5678,7 +5678,7 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel>.panel-body+.table, .panel>.panel-body+.table-responsive {
-    border-top: 1px solid #333333
+    border-top: 1px solid #ddd
 }
 
 .panel>.table>tbody:first-child>tr:first-child th, .panel>.table>tbody:first-child>tr:first-child td {
@@ -5745,7 +5745,7 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
-    border-top: 1px solid #4C4C4C
+    border-top: 1px solid #ddd
 }
 
 .panel-group .panel-footer {
@@ -5753,40 +5753,40 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-group .panel-footer+.panel-collapse .panel-body {
-    border-bottom: 1px solid #4C4C4C
+    border-bottom: 1px solid #ddd
 }
 
 .panel-default {
-    border-color: #4C4C4C
+    border-color: #ddd
 }
 
 .panel-default>.panel-heading {
     color: #333;
-    background-color: #4C4C4C;
-    border-color: #4C4C4C
+    background-color: #f5f5f5;
+    border-color: #ddd
 }
 
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
-    border-top-color: #4C4C4C
+    border-top-color: #ddd
 }
 
 .panel-default>.panel-heading .badge {
-    color: #4C4C4C;
-    background-color: #4C4C4C
+    color: #f5f5f5;
+    background-color: #333
 }
 
 .panel-default>.panel-footer+.panel-collapse>.panel-body {
-    border-bottom-color: #4C4C4C
+    border-bottom-color: #ddd
 }
 
 .panel-primary {
-    border-color: #333;
+    border-color: #f5f5f5;
 }
 
 .panel-primary>.panel-heading {
-    color: #E8E8E8;
-    background-color: #3E3E3E;
-    border-color: #333;
+    color: #303030;
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
 }
 
 .panel-primary>.panel-heading+.panel-collapse>.panel-body {
@@ -5826,12 +5826,12 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-info {
-    border-color: #414141
+    border-color: #bce8f1
 }
 
 .panel-info>.panel-heading {
-    color: #ebebeb;
-    background-color: #414141;
+    color: #31708f;
+    background-color: #E5F7F3;
     border-color: #B7F4ED;
 }
 
@@ -5840,8 +5840,8 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-info>.panel-heading .badge {
-    color: #414141;
-    background-color: #ebebeb
+    color: #d9edf7;
+    background-color: #31708f
 }
 
 .panel-info>.panel-footer+.panel-collapse>.panel-body {
@@ -5933,7 +5933,7 @@ a.list-group-item-danger.active:focus {
 }
 
 .well blockquote {
-    border-color: #333333;
+    border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15)
 }
 

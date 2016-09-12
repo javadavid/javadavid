@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rest API Automation Testing
-category:Resume
+category: Resume
 tags: 
 keywords: 
 description: 

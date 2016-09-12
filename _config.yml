@@ -18,7 +18,7 @@ title: Kuma's blog
 description: My personal blog
 url: http://xh888.github.io/blog
 rss_url: /pages/atom.xml
-baseurl: "/blog"
+baseurl: ""
 duoshuo-short_name: "xh888-blog"
 # gavatar头像及Favicon
 gavatar: /public/img/gavatar.png
